@@ -45,6 +45,10 @@ rm -f "$USER_HOME/$BINARY_NAME"
 
 # Download the latest binary
 wget "$BINARY_URL" -O "$USER_HOME/$BINARY_NAME"
+if [ $? -ne 0 ]; then
+    echo "Failed to download binary from $BINARY_URL"
+    exit 1
+fi
 
 # Make the binary executable
 chmod +x "$USER_HOME/$BINARY_NAME"
