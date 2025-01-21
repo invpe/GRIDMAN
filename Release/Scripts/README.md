@@ -5,19 +5,23 @@ The best way is to autostart with a simple script. Follow the steps below to run
 
 ## Linux / Raspberry PI
 
-1. `adduser gridman`
+1. Create user: `adduser gridman`
+
+2. `su gridman`
+
+3. `cd ~/`
    
-2. Execute `crontab -e`
+4. Execute `crontab -e`
 
-3. Add `@reboot /home/gridman/autostart.sh GRIDMAN_SERVER_IP NODE_NAME ` at the end.
+5. Add `@reboot /home/gridman/autostart.sh GRIDMAN_SERVER_IP NODE_NAME ` at the end.
 
-4. Exit crontab editing
+6. Exit crontab editing
 
-5. Execute `cd /home/gridman`
+7. Execute `cd /home/gridman`
 
-6. Download `autostart.sh`
+8. Download `autostart.sh`
  
-7. Make the script executable with `chmod +x ./autostart.sh`
+9. Make the script executable with `chmod +x ./autostart.sh`
 
-8. Simply `reboot` to test.
+10. Simply `reboot` to test.
 
