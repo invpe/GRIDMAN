@@ -7,7 +7,7 @@ The best way is to autostart with a simple script. Follow the steps below to run
 
 1. Execute `crontab -e`
 
-2. Add `@reboot /home/pi/autostart.sh` at the end.
+2. Add `@reboot /home/pi/autostart.sh NODE_NAME GRIDMAN_SERVER_IP` at the end.
 
 3. Exit crontab editing
 
