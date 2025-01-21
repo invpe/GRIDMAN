@@ -9,7 +9,7 @@ The best way is to autostart with a simple script. Follow the steps below to run
    
 2. Execute `crontab -e`
 
-3. Add `@reboot /home/gridman/autostart.sh NODE_NAME GRIDMAN_SERVER_IP` at the end.
+3. Add `@reboot /home/gridman/autostart.sh GRIDMAN_SERVER_IP NODE_NAME ` at the end.
 
 4. Exit crontab editing
 
