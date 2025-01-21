@@ -23,7 +23,13 @@ sleep 60
 
 # Detect architecture
 ARCH=$(uname -m)
-if [[ "$ARCH" == "aarch64" ]]; then
+if [[ "$ARCH" == "x86_64" ]]; then
+    BINARY_URL="https://github.com/invpe/GRIDMAN/releases/latest/download/gmworker_linux64.bin"
+    BINARY_NAME="gmworker_linux64.bin"
+elif [[ "$ARCH" == "i686" || "$ARCH" == "i386" ]]; then
+    BINARY_URL="https://github.com/invpe/GRIDMAN/releases/latest/download/gmworker_linux32.bin"
+    BINARY_NAME="gmworker_linux32.bin"
+elif [[ "$ARCH" == "aarch64" ]]; then
     BINARY_URL="https://github.com/invpe/GRIDMAN/releases/latest/download/gmworker_arm64.bin"
     BINARY_NAME="gmworker_arm64.bin"
 elif [[ "$ARCH" == "armv7l" || "$ARCH" == "armhf" ]]; then
@@ -42,7 +48,6 @@ wget "$BINARY_URL" -O "$USER_HOME/$BINARY_NAME"
 
 # Make the binary executable
 chmod +x "$USER_HOME/$BINARY_NAME"
- 
 
 # Start one instance per core in separate screen sessions
 for ((i=0; i<CORES; i++)); do
