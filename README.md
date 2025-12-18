@@ -3,6 +3,7 @@
 
 
 # GridMan
+<img width="651" height="829" alt="image" src="https://github.com/user-attachments/assets/5ef77298-1c57-4208-b022-9ca93dc31c22" />
 
 GridMan is a **private, lightweight distributed computing grid** designed to reuse
 **idle consumer-grade hardware** for real computation.
@@ -96,6 +97,9 @@ The goal is **fast task deployment and execution** in controlled & trusted envir
 ---
 
 ## What GridMan Optimizes For
+
+<img width="1150" height="723" alt="image" src="https://github.com/user-attachments/assets/df13c900-f3c1-4533-8a46-e8fe7d698551" />
+
 
 GridMan is optimized for **practical distributed execution** across heterogeneous devices.
 
