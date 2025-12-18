@@ -133,6 +133,7 @@ Specifically, it focuses on:
 ---
 
 ## What GridMan Does *Not* Try to Be
+<img width="1089" height="819" alt="image" src="https://github.com/user-attachments/assets/dc91bda1-21ae-436d-a718-3e58bdf9c4e7" />
 
 - Not a cloud platform
 - Not a secure execution sandbox
