@@ -32,6 +32,9 @@ into a **personal compute grid**.
 
 ## Supported Hardware
 
+<img width="1306" height="988" alt="image" src="https://github.com/user-attachments/assets/de3730da-5e0a-4d3b-a612-addce2647208" />
+
+
 GridMan intentionally targets **consumer-grade electronics**:
 
 - **ESP32** (CPU, ELF task execution)
@@ -46,9 +49,14 @@ The system does not require:
 - cloud infrastructure
 - persistent connectivity
 
+
+
 ---
 
 ## Mobile & GPU Compute
+
+<img width="643" height="480" alt="image" src="https://github.com/user-attachments/assets/7582bde6-e0c5-4aa4-bb81-6cf72d5737a3" />
+
 
 GridMan supports **shader-driven GPGPU execution**.
 
@@ -62,6 +70,9 @@ This approach keeps GPU workers:
 ---
 
 ## Private Grid by Design
+
+<img width="688" height="507" alt="image" src="https://github.com/user-attachments/assets/38405385-859c-4c1e-83f8-bf490ae360d2" />
+
 
 GridMan is designed to run as a **private grid**. 
 
