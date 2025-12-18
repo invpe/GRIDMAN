@@ -1,0 +1,13 @@
+#version 300 es
+precision highp int;
+precision highp float;
+precision highp usampler2D;
+
+layout(location = 0) out uvec4 outColor;
+
+void main() {
+    uint x = uint(gl_FragCoord.x);
+    uint y = uint(gl_FragCoord.y);
+
+    outColor = uvec4(42u,43u,44u,45u);
+}
