@@ -1,0 +1,20 @@
+#version 300 es
+precision highp float;
+
+uniform uint base;
+uniform float scale;
+
+layout(location = 0) out uvec4 outColor;
+
+void main()
+{
+    uint x = uint(gl_FragCoord.x);
+    uint v = base + uint(float(x) * scale);
+
+    outColor = uvec4(
+        v,        // R = computed value
+        base,     // G = base (echo)
+        uint(scale * 10.0), // B = scale * 10 (echo, int)
+        1u        // A = marker
+    );
+}
