@@ -1,0 +1,25 @@
+#version 300 es
+
+precision highp float;
+
+uniform uvec2 range;
+uniform uvec4 params;
+
+layout(location = 0) out uvec4 outColor;
+
+void main()
+{
+    uint x = uint(gl_FragCoord.x);
+
+    // range.x = start
+    // range.y = end
+    uint v = range.x + x;
+
+    // params = (p0, p1, p2, p3)
+    outColor = uvec4(
+        v,          // R = computed value
+        params.x,   // G = echo p0
+        params.y,   // B = echo p1
+        params.w    // A = echo p3 (marker)
+    );
+}
