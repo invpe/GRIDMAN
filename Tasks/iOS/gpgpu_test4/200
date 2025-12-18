@@ -1,0 +1,26 @@
+#version 300 es 
+
+uniform uvec2 range;
+uniform uint divisor;
+
+layout(location = 0) out uvec4 outColor;
+
+void main()
+{
+    uint gx = uint(gl_FragCoord.x);
+    uint gy = uint(gl_FragCoord.y);
+
+    uint width = uint(gl_FragCoord.w); // albo przekazane jako uniform
+    uint global_id = gy * uint(32) + gx; // dla @fbo,32,32
+
+    uint idx = range.x + global_id;
+
+    uint hit = (idx % divisor == 0u) ? 1u : 0u;
+
+    outColor = uvec4(
+        idx,    // R: tested value
+        hit,    // G: predicate result
+        0u,     // B: reserved
+        1u      // A: marker
+    );
+}
