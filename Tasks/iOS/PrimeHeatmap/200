@@ -1,0 +1,36 @@
+#version 300 es 
+uniform uint start;
+uniform uint width;
+
+layout(location = 0) out uvec4 outColor;
+
+bool isPrime(uint n)
+{
+    if (n < 2u)
+        return false;
+
+    for (uint i = 2u; i * i <= n; ++i)
+    {
+        if (n % i == 0u)
+            return false;
+    }
+    return true;
+}
+
+void main()
+{
+    uint x = uint(gl_FragCoord.x);
+    uint y = uint(gl_FragCoord.y);
+
+    uint idx = x + y * width;
+    uint value = start + idx;
+
+    bool prime = isPrime(value);
+
+    outColor = uvec4(
+        value,               // R: tested number
+        prime ? 1u : 0u,     // G: is prime
+        idx,                 // B: local index (debug)
+        1u                   // A: marker
+    );
+}
