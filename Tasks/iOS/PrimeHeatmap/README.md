@@ -1,5 +1,8 @@
 # GPGPU Prime Heatmap Demo (GridMan task)
 
+![gpu5_test](https://github.com/user-attachments/assets/c79ec40c-99a7-443a-80de-60ae80b37de0)
+
+
 This project demonstrates a **fully generic GPGPU task execution pipeline on iOS**, powered by **OpenGL ES fragment shaders** and orchestrated by the **GridMan**.
 
 The demo computes **prime numbers** over large numeric ranges using **GPU on iPhone**, distributes the workload via GridMan, and visualizes the results **live** as a 2D heatmap.
